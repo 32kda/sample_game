@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd0rpq3vmqqwk"]
+
+[ext_resource type="Script" path="res://scene.gd" id="1_5ubbq"]
+
+[node name="scene" type="Node2D"]
+script = ExtResource("1_5ubbq")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 43.0
+offset_top = 592.0
+offset_right = 83.0
+offset_bottom = 615.0
+text = "Hits: 0"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
